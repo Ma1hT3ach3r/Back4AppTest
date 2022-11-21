@@ -7,11 +7,19 @@
       type="text/javascript"
       src="https://npmcdn.com/parse/dist/parse.min.js"
     ></script>
-    <script>
+    
+  </head>
+  <body>
+    <h1>JS SDK</h1>
+    <input id="username" type="text" placeholder="Username" />
+    <input id="email" type="email" placeholder="Email" />
+    <input id="password" type="password" placeholder="Password" />
+    <button id="createButton">Create User</button>
+  </body>
+  <script>
     // Initialize Parse
     Parse.initialize("TJTIWoIiiUGOgY3oEdNr9UrngXTFWMfmxe2XFEyO", "k0O5j90irB1libCAOuF5UNXlTrPnK4i7gAiUsAUB"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
-    Parse.serverURL = "https://parseapi.back4app.com/";
-
+    
     // Create a new User
     async function createParseUser() {
       // Creates a new Parse "User" object, which is created by default in your Parse app
@@ -40,14 +48,7 @@
     document.getElementById("createButton").addEventListener("click", async function () {
       createParseUser();
     });
+      Parse.serverURL = "https://parseapi.back4app.com/";
+
   </script>
-  </head>
-  <body>
-    <h1>JS SDK</h1>
-    <input id="username" type="text" placeholder="Username" />
-    <input id="email" type="email" placeholder="Email" />
-    <input id="password" type="password" placeholder="Password" />
-    <button id="createButton">Create User</button>
-  </body>
-  
 </html>
